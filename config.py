@@ -10,7 +10,6 @@ class Config:
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
     
     # Data configuration
-    # data_path = '/home/kazgu/kazgu/project/claudecode_project/RL_for_kg_correction/start_over/real_kg/WN18RR/'  # Can switch to WN18RR
     data_path = '/data/FB15K237/'  # Can switch to WN18RR
     
     @classmethod

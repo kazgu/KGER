@@ -252,26 +252,7 @@ def train_transe(save_path: str = None):
         print(f"  Hits@3:     {hits3:.4f}")
         print(f"  Hits@10:    {hits10:.4f}")
             
-        # Triple quality metrics
-        # quality_metrics = evaluator.evaluate_triple_quality(test_sample)
-        # print(f"\n📈 Triple Quality:")
-        # print(f"  Mean Score: {quality_metrics['mean_score']:.4f} ± {quality_metrics['std_score']:.4f}")
-        # print(f"  Min Score:  {quality_metrics['min_score']:.4f}")
-        # print(f"  Max Score:  {quality_metrics['max_score']:.4f}")
-        
-        # Compare with expected performance
-        if 'FB15K' in Config.data_path:
-            print("\n📌 Expected Performance (TransE on FB15K-237):")
-            print("  MRR:        ~0.29")
-            print("  Hits@1:     ~0.20")
-            print("  Hits@3:     ~0.32")
-            print("  Hits@10:    ~0.47") 
-        else:  # WN18RR
-            print("\n📌 Expected Performance (TransE on WN18RR):")
-            print("  MRR:        ~0.22")
-            print("  Hits@1:     ~0.04")
-            print("  Hits@3:     ~0.44")
-            print("  Hits@10:    ~0.53")
+
             
     elif data_loader.valid_triples and len(data_loader.valid_triples) > 0:
         print(f"\nNo test set found. Evaluating on {len(data_loader.valid_triples)} validation triples...")
